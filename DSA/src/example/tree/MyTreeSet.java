@@ -35,7 +35,7 @@ public class MyTreeSet {
 		if((temp.atomicNumber >ce.atomicNumber) && (ce.right!=null)) {
 			search(ce.right);
 		}
-		else if((temp.atomicNumber < ce.atomicNumber) && (ce.right==null)) {
+		else if((temp.atomicNumber > ce.atomicNumber) && (ce.right==null)) {
 			ce.left=temp;
 		}
 		
@@ -55,7 +55,11 @@ public class MyTreeSet {
 		}
 		if(ce.left!=null)
 			inOrder(ce.left);
+		
 		System.out.println("DATA :"+ce);
+		
+		if(ce.right!=null)
+			inOrder(ce.right);
 		
 	}
 }

@@ -27,12 +27,19 @@ public class MyTreeSetTest {
 			System.out.println("4. PreOrder an Element ");
 			System.out.println("5. PostOrder an Element ");
 			System.out.println("6. Exit ");
+			System.out.println("Enter choice : ");
 			 choice=sc.nextInt();
 			 
 			 switch(choice) {
 			 case 1: 
 				 	myTreeSet.insert();
-				 	return;
+				 	break;
+			 case 3: 
+				 	myTreeSet.inOrder(myTreeSet.root);
+				 	break;
+				 	
+			 case 6:
+				 	break;
 			 }
 			
 		} while(choice!=6);
